@@ -1,9 +1,11 @@
 import serial
 import time
+import stack
 
 # Replace 'COM3' with the correct port for your system
 arduino_port = 'COM3'
 baud_rate = 9600
+data_stack = stack.CircularStack()
 
 try:
     # Establish connection with Arduino
